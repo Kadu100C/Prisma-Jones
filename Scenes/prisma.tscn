@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://hv6uxo3aivh3"]
+
+[ext_resource type="Script" uid="uid://bci6gfuee8a0u" path="res://Scripts/prisma_player.gd" id="1_jkp0n"]
+[ext_resource type="Texture2D" uid="uid://dlas05br52daw" path="res://icon.svg" id="1_txcpq"]
+
+[sub_resource type="Animation" id="Animation_1ck1k"]
+resource_name = "chicotada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.29, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_2ib61"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rxt0s"]
+_data = {
+&"RESET": SubResource("Animation_2ib61"),
+&"chicotada": SubResource("Animation_1ck1k")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04dmd"]
+size = Vector2(244.99998, 264.99997)
+
+[node name="Prisma" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_jkp0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_txcpq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rxt0s")
+}
+
+[node name="Area2D" type="Area2D" parent="." groups=["chicotada"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["chicotada"]]
+position = Vector2(230, -5)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_04dmd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
