@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byurb6o1iuv41"
-path="res://.godot/imported/I sprite idle-Sheet.png-3a00e9bc4dfa3d9515f9284ccf0224b3.ctex"
+uid="uid://cbuhyya8ibyhn"
+path="res://.godot/imported/pedra.png-5ce5b4b5635a49b4caf6414bdc48ab4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/I sprite idle-Sheet.png"
-dest_files=["res://.godot/imported/I sprite idle-Sheet.png-3a00e9bc4dfa3d9515f9284ccf0224b3.ctex"]
+source_file="res://Sprites/pedra.png"
+dest_files=["res://.godot/imported/pedra.png-5ce5b4b5635a49b4caf6414bdc48ab4a.ctex"]
 
 [params]
 

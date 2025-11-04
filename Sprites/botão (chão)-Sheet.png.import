@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0qy6su6e76n6"
-path="res://.godot/imported/tileset prisma jones-export.png-372859b03030332469bd9a72d9aabbe9.ctex"
+uid="uid://2c2olw07rv28"
+path="res://.godot/imported/botão (chão)-Sheet.png-66515816d752c747245b0578a609f702.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tileset prisma jones-export.png"
-dest_files=["res://.godot/imported/tileset prisma jones-export.png-372859b03030332469bd9a72d9aabbe9.ctex"]
+source_file="res://Sprites/botão (chão)-Sheet.png"
+dest_files=["res://.godot/imported/botão (chão)-Sheet.png-66515816d752c747245b0578a609f702.ctex"]
 
 [params]
 

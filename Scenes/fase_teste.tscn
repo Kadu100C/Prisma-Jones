@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnkeqgr8twymh"]
+
+[ext_resource type="Script" uid="uid://b4pfxcmxi1w1k" path="res://Scripts/fase_1.gd" id="1_vbr3q"]
+[ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="2_seeb5"]
+[ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="3_x3mrb"]
+[ext_resource type="Texture2D" uid="uid://dlas05br52daw" path="res://icon.svg" id="4_ojxc1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gw3gf"]
+texture = ExtResource("2_seeb5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -8, -7.1067886)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.0560255, 8, 6.852975, -7.0052624, -8, -6.903737, -8, -8, 8, -8, 8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.9392443, -5.786956, 5.837718, -8, 8, -8, 8, -5.5839047)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.888481, -8, -8, -5.1270404, -8, -5.1270404, -5.990007)
+5:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.106785, -8, -7.106785, 8, -8, 8, -8, -8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.0560255, 8, 6.9544992, -8, 8, -8, 8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.431617, 8, 5.533141, 5.3808537, 8, 5.2793293, 8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 5.177803, -5.431617, 5.177803, -5.3300915, 8)
+5:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.106785, -8, -7.0052605, 7.1067867, 8, 7.208315, 8, 8, -8, 8, -8, -8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7.208315, 8, 7.208315, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7.208315, 6.7514486, 7.0052624, 6.9544992, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 5.177803, -5.431617, 5.177803, -5.3300915, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.431617, 8, 5.533141, 5.3808537, 8, 5.2793293, 8, 8)
+5:2/0 = 0
+0:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.2793283, -8, -8, -5.9900074, -8, -5.7869563, -5.2793283)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.482379, -5.990007, 5.482379, -8, 8, -8, 8, -5.5839047)
+
+[sub_resource type="TileSet" id="TileSet_hya8f"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_gw3gf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efuq8"]
+size = Vector2(14, 14)
+
+[node name="fase_teste" type="Node2D"]
+
+[node name="fase1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vbr3q")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hya8f")
+format = 2
+layer_0/tile_data = PackedInt32Array(458752, 65536, 2, 458753, 65536, 2, 458754, 65536, 2, 458755, 65536, 2, 393216, 65536, 0, 393217, 65536, 0, 393218, 65536, 0, 393219, 65536, 0, 458756, 196608, 2, 524292, 0, 2, 524293, 65536, 2, 524294, 65536, 2, 524295, 65536, 2, 524296, 65536, 2, 524297, 65536, 2, 524298, 65536, 2, 393220, 65536, 0, 393221, 65536, 0, 393222, 65536, 0, 393223, 65536, 0, 393224, 65536, 0, 393225, 65536, 0, 393226, 65536, 0, 524299, 131072, 2, 393227, 196608, 3, 393228, 65536, 1, 393229, 65536, 1, 393230, 196608, 1, 458763, 262144, 2, 458764, 65536, 2, 458765, 65536, 2, 458766, 131072, 2, 458757, 65536, 1, 458758, 65536, 1, 458759, 65536, 1, 458760, 65536, 1, 458761, 65536, 1, 458762, 65536, 1, 327692, 65536, 0, 327691, 0, 0, 327694, 65536, 0, 327693, 65536, 0, 393231, 65536, 2, 327695, 65536, 0)
+
+[node name="Prisma" parent="." instance=ExtResource("3_x3mrb")]
+position = Vector2(123.99999, 116)
+
+[node name="botao" type="Area2D" parent="." groups=["botao"]]
+position = Vector2(178, 115)
+
+[node name="Sprite2D" type="Sprite2D" parent="botao"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ojxc1")
+
+[node name="butau" type="CollisionShape2D" parent="botao"]
+shape = SubResource("RectangleShape2D_efuq8")
+
+[connection signal="area_entered" from="botao" to="fase1" method="_on_botao_area_entered"]
