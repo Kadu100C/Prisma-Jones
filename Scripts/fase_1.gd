@@ -1,4 +1,7 @@
-extends Control
+extends Node2D
+@onready var teleport: CollisionShape2D = $Prisma/prox_area/teleport
+@onready var prisma: CharacterBody2D = $Prisma
+@onready var prox_area: Area2D = $Prisma/prox_area
 
 
 var puzle = 0
@@ -23,3 +26,7 @@ func _on_botao_area_entered(area: Area2D) -> void:
 		$"../botao".queue_free()
 		puzle += 1
 		print(puzle)
+
+
+func _on_prox_area_body_entered(body: CharacterBody2D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/fase_2.tscn")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqybabhltbe65"]
+
+[ext_resource type="Texture2D" uid="uid://bwu620lh0gypj" path="res://Sprites/prisma-sprite-sheet.png" id="1_g6get"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1a3d"]
+atlas = ExtResource("1_g6get")
+region = Rect2(368, 0, 92, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5np1t"]
+atlas = ExtResource("1_g6get")
+region = Rect2(460, 0, 92, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1qh6"]
+atlas = ExtResource("1_g6get")
+region = Rect2(552, 0, 92, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjtxq"]
+atlas = ExtResource("1_g6get")
+region = Rect2(644, 0, 92, 70)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p28a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1a3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5np1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1qh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjtxq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6get"]
+size = Vector2(20, 2)
+
+[node name="prisma_runner" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2p28a")
+autoplay = "default"
+frame_progress = 0.87852144
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_g6get")

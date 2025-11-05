@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cr00nu4w1e1rw"]
+
+[ext_resource type="Texture2D" uid="uid://bj0jjr01btktp" path="res://Sprites/grade-Sheet.png" id="1_5qpxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qpxr"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0tgu"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt5mh"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lno6h"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea6oa"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhovk"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycnht"]
+atlas = ExtResource("1_5qpxr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5uosg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qpxr")
+}],
+"loop": false,
+"name": &"idlegrade",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0tgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt5mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lno6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea6oa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhovk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycnht")
+}],
+"loop": false,
+"name": &"parabens",
+"speed": 5.0
+}]
+
+[node name="grade" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_5uosg")
+animation = &"idlegrade"
+autoplay = "idlegrade"

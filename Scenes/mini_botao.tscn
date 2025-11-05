@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://clgoid2hgorl5"]
+
+[ext_resource type="Texture2D" uid="uid://c5aild1nyqu4c" path="res://Sprites/mini pillar button-Sheet.png" id="1_r115i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8208"]
+atlas = ExtResource("1_r115i")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx8yh"]
+atlas = ExtResource("1_r115i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdxwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8208")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx8yh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mini_botao" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_fdxwh")

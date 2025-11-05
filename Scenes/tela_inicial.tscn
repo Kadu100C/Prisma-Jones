@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://bewdjdeij4e10"]
+[gd_scene load_steps=3 format=3 uid="uid://bewdjdeij4e10"]
+
+[ext_resource type="FontFile" uid="uid://b1p5e4cluvlo7" path="res://Fonts/Minecraftia-Regular.ttf" id="1_6rs07"]
+[ext_resource type="Script" uid="uid://nb713v1kgldq" path="res://Scripts/tela_inicial.gd" id="1_rrt2p"]
 
 [node name="tela_inicial" type="Control"]
 layout_mode = 3
@@ -7,3 +10,65 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rrt2p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8228342, 0.7877117, 0.6911025, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = 5.0
+offset_right = 34.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="iniciar_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6rs07")
+theme_override_font_sizes/font_size = 16
+text = "Iniciar Jogo"
+
+[node name="creditos_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6rs07")
+theme_override_font_sizes/font_size = 16
+text = "Créditos"
+
+[node name="sair_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6rs07")
+theme_override_font_sizes/font_size = 16
+text = "Sair do Jogo"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.5
+offset_top = 25.0
+offset_right = 106.5
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_6rs07")
+theme_override_font_sizes/font_size = 32
+text = "PRISMA JONES
+em busca da baleia de ouro"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/iniciar_button" to="." method="_on_iniciar_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair_button" to="." method="_on_sair_button_pressed"]

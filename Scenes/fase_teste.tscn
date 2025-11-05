@@ -62,12 +62,10 @@ offset_bottom = 40.0
 script = ExtResource("1_vbr3q")
 
 [node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_hya8f")
 format = 2
 layer_0/tile_data = PackedInt32Array(458752, 65536, 2, 458753, 65536, 2, 458754, 65536, 2, 458755, 65536, 2, 393216, 65536, 0, 393217, 65536, 0, 393218, 65536, 0, 393219, 65536, 0, 458756, 196608, 2, 524292, 0, 2, 524293, 65536, 2, 524294, 65536, 2, 524295, 65536, 2, 524296, 65536, 2, 524297, 65536, 2, 524298, 65536, 2, 393220, 65536, 0, 393221, 65536, 0, 393222, 65536, 0, 393223, 65536, 0, 393224, 65536, 0, 393225, 65536, 0, 393226, 65536, 0, 524299, 131072, 2, 393227, 196608, 3, 393228, 65536, 1, 393229, 65536, 1, 393230, 196608, 1, 458763, 262144, 2, 458764, 65536, 2, 458765, 65536, 2, 458766, 131072, 2, 458757, 65536, 1, 458758, 65536, 1, 458759, 65536, 1, 458760, 65536, 1, 458761, 65536, 1, 458762, 65536, 1, 327692, 65536, 0, 327691, 0, 0, 327694, 65536, 0, 327693, 65536, 0, 393231, 65536, 2, 327695, 65536, 0)
-
-[node name="Prisma" parent="." instance=ExtResource("3_x3mrb")]
-position = Vector2(123.99999, 116)
 
 [node name="botao" type="Area2D" parent="." groups=["botao"]]
 position = Vector2(178, 115)
@@ -78,5 +76,9 @@ texture = ExtResource("4_ojxc1")
 
 [node name="butau" type="CollisionShape2D" parent="botao"]
 shape = SubResource("RectangleShape2D_efuq8")
+
+[node name="Prisma2" parent="." instance=ExtResource("3_x3mrb")]
+position = Vector2(56, 231)
+scale = Vector2(0.8, 0.8)
 
 [connection signal="area_entered" from="botao" to="fase1" method="_on_botao_area_entered"]
