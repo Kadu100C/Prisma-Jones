@@ -16,10 +16,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func _process(delta):
+func _process(_delta):
 	if Global.cutscene == false:
 		direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		
+	if direction.x > 0:
+		animation_player.play("idle_down")
 	
 	velocity = direction * move_speed
 	
@@ -29,7 +32,7 @@ func _process(delta):
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
 
 
@@ -55,7 +58,8 @@ func SetState() -> bool:
 	var new_state : String = "idle" if direction == Vector2.ZERO else "walk"
 	if new_state == state:
 		return false
-	state == new_state
+	
+	state = new_state
 	return true
 
 
@@ -70,4 +74,4 @@ func AnimDirection() -> String:
 	elif  cardinal_direction == Vector2.UP:
 		return "up"
 	else:
-		return "right"
+		return "side"

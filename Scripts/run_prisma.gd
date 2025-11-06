@@ -39,16 +39,16 @@ func _process(delta: float) -> void:
 	print(cima)
 	print(baixo)
 
-func _on_meio_body_entered(body: AnimatedSprite2D) -> void:
+func _on_meio_body_entered(_body: AnimatedSprite2D) -> void:
 	cima = 1
 	baixo = 1
 
 
-func _on_cima_body_entered(body: AnimatedSprite2D) -> void:
+func _on_cima_body_entered(_body: AnimatedSprite2D) -> void:
 	cima = 0
 	baixo = 1
 
 
-func _on_baixo_body_entered(body: AnimatedSprite2D) -> void:
+func _on_baixo_body_entered(_body: AnimatedSprite2D) -> void:
 	cima = 1
 	baixo = 0
