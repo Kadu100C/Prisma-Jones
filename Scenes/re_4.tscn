@@ -41,4 +41,5 @@ animations = [{
 [node name="re4" type="AnimatedSprite2D"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0auk6")
-frame_progress = 0.59143806
+autoplay = "default"
+frame_progress = 0.12395514

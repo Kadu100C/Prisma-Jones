@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ls4pom5sknw"]
+
+[ext_resource type="FontFile" uid="uid://b1p5e4cluvlo7" path="res://Fonts/Minecraftia-Regular.ttf" id="1_wma5v"]
+[ext_resource type="Script" uid="uid://bqe1jg3nf56mv" path="res://Scripts/tela_final.gd" id="1_wsgnc"]
+
+[node name="tela_final" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wsgnc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9128034, 0.79283386, 0.39502677, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.5
+offset_top = -65.0
+offset_right = 242.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_wma5v")
+theme_override_font_sizes/font_size = 34
+text = "Você achou o tesouro!!!!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -14.0
+offset_right = 96.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_wma5v")
+text = "mas só achou memso"
+
+[node name="voltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = 112.0
+offset_right = 51.5
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_wma5v")
+text = "Menu Inicial"
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

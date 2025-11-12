@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8rv66onmmddk"]
+[gd_scene load_steps=15 format=3 uid="uid://8rv66onmmddk"]
 
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_dpkoo"]
 [ext_resource type="Script" uid="uid://ccbw7eowqd6u4" path="res://Scripts/fase_4.gd" id="1_pa1ka"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dnsp6t4ljjg54" path="res://Scenes/botao_chao.tscn" id="5_840x6"]
 [ext_resource type="PackedScene" uid="uid://v8fo4j1nteh0" path="res://Scenes/porta_a.tscn" id="5_dpkoo"]
 [ext_resource type="PackedScene" uid="uid://cr2yjjgv6uyu" path="res://Scenes/pillar_man.tscn" id="5_e5740"]
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="7_pa1ka"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpivt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_840x6"]
 texture = ExtResource("1_dpkoo")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
@@ -51,7 +52,7 @@ texture = ExtResource("1_dpkoo")
 
 [sub_resource type="TileSet" id="TileSet_dgwn4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_bpivt")
+sources/0 = SubResource("TileSetAtlasSource_840x6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpkoo"]
 
@@ -93,6 +94,15 @@ scale = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botao_1"]
 shape = SubResource("RectangleShape2D_dpkoo")
 
+[node name="Prisma" parent="." instance=ExtResource("2_840x6")]
+position = Vector2(64, 464)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Prisma"]
+limit_left = 0
+limit_right = 700
+limit_bottom = 504
+
 [node name="botao_2" type="Area2D" parent="."]
 visible = false
 position = Vector2(112, 248)
@@ -114,15 +124,6 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_pa1ka")
 
-[node name="Prisma" parent="." instance=ExtResource("2_840x6")]
-position = Vector2(64, 464)
-scale = Vector2(2, 2)
-
-[node name="Camera2D" type="Camera2D" parent="Prisma"]
-limit_left = 0
-limit_right = 700
-limit_bottom = 504
-
 [node name="bloqueio" type="StaticBody2D" parent="."]
 position = Vector2(608, 128)
 
@@ -136,6 +137,23 @@ position = Vector2(584, 96)
 [node name="teleport" type="CollisionShape2D" parent="prox_area"]
 position = Vector2(23, -11)
 shape = SubResource("RectangleShape2D_e5740")
+
+[node name="tochas" type="Node2D" parent="."]
+
+[node name="TochaAcesa" type="Sprite2D" parent="tochas"]
+position = Vector2(248, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("7_pa1ka")
+
+[node name="TochaAcesa2" type="Sprite2D" parent="tochas"]
+position = Vector2(416, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("7_pa1ka")
+
+[node name="TochaAcesa3" type="Sprite2D" parent="tochas"]
+position = Vector2(544, 288)
+scale = Vector2(2, 2)
+texture = ExtResource("7_pa1ka")
 
 [connection signal="body_entered" from="botao_1" to="." method="_on_botao_1_body_entered"]
 [connection signal="body_exited" from="botao_1" to="." method="_on_botao_1_body_exited"]

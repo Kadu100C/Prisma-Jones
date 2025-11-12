@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvuuofv584j4"]
+
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="1_fxk18"]
+
+[node name="tocha acesa" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fxk18")

@@ -49,4 +49,4 @@ func _on_botao_3_area_entered(area: Area2D) -> void:
 
 
 func _on_prox_area_body_entered(body: CharacterBody2D) -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/fase_5.tscn")

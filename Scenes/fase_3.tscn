@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://h77ymujfhduq"]
+[gd_scene load_steps=14 format=3 uid="uid://h77ymujfhduq"]
 
 [ext_resource type="Script" uid="uid://d4b88djtvwl6" path="res://Scripts/fase_3.gd" id="1_ubys0"]
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_wyqio"]
@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cr2yjjgv6uyu" path="res://Scenes/pillar_man.tscn" id="5_43iu4"]
 [ext_resource type="PackedScene" uid="uid://dchq7m06fwvgx" path="res://Scenes/porta_34.tscn" id="5_ubys0"]
 [ext_resource type="FontFile" uid="uid://b1p5e4cluvlo7" path="res://Fonts/Minecraftia-Regular.ttf" id="7_4lc6t"]
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="8_5f3i0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5f3i0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lc6t"]
 texture = ExtResource("1_wyqio")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
@@ -52,7 +53,7 @@ texture = ExtResource("1_wyqio")
 
 [sub_resource type="TileSet" id="TileSet_od1yq"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_5f3i0")
+sources/0 = SubResource("TileSetAtlasSource_4lc6t")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m48by"]
 size = Vector2(29, 132)
@@ -123,6 +124,14 @@ offset_right = 524.0
 offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("7_4lc6t")
 text = "Aperte Z para usar o seu chicote"
+metadata/_edit_use_anchors_ = true
+
+[node name="tochas" type="Node2D" parent="."]
+
+[node name="TochaAcesa" type="Sprite2D" parent="."]
+position = Vector2(552, 224)
+scale = Vector2(2, 2)
+texture = ExtResource("8_5f3i0")
 
 [connection signal="body_entered" from="prox_area" to="." method="_on_prox_area_body_entered"]
 [connection signal="area_entered" from="botao" to="." method="_on_botao_area_entered"]

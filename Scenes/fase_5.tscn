@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbehnt4siping"]
+[gd_scene load_steps=15 format=3 uid="uid://bbehnt4siping"]
 
 [ext_resource type="Script" uid="uid://dlxc4paqpmjoh" path="res://Scripts/fase_5.gd" id="1_36uxa"]
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_jr2ml"]
 [ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="2_jdrna"]
 [ext_resource type="PackedScene" uid="uid://dchq7m06fwvgx" path="res://Scenes/porta_34.tscn" id="3_50aes"]
 [ext_resource type="PackedScene" uid="uid://cr2yjjgv6uyu" path="res://Scenes/pillar_man.tscn" id="4_a8mqw"]
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="6_di7eg"]
+[ext_resource type="Texture2D" uid="uid://h2ifn2noc1mt" path="res://Sprites/tocha apagada.png" id="7_q5ohk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdrna"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtvgq"]
 texture = ExtResource("1_jr2ml")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
@@ -50,7 +52,7 @@ texture = ExtResource("1_jr2ml")
 
 [sub_resource type="TileSet" id="TileSet_50aes"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jdrna")
+sources/0 = SubResource("TileSetAtlasSource_dtvgq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8mqw"]
 
@@ -135,6 +137,53 @@ position = Vector2(672, 504)
 [node name="teleport" type="CollisionShape2D" parent="prox_area"]
 position = Vector2(7, -31)
 shape = SubResource("RectangleShape2D_q5ohk")
+
+[node name="tochas2" type="Node2D" parent="."]
+
+[node name="TochaAcesa" type="Sprite2D" parent="tochas2"]
+position = Vector2(320, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("6_di7eg")
+
+[node name="TochaApagada" type="Sprite2D" parent="tochas2"]
+position = Vector2(320, 520)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
+
+[node name="TochaApagada2" type="Sprite2D" parent="tochas2"]
+position = Vector2(8, 272)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
+
+[node name="TochaApagada3" type="Sprite2D" parent="tochas2"]
+position = Vector2(-24, 296)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
+
+[node name="TochaAcesa2" type="Sprite2D" parent="tochas2"]
+position = Vector2(-32, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("6_di7eg")
+
+[node name="TochaAcesa3" type="Sprite2D" parent="tochas2"]
+position = Vector2(504, 184)
+scale = Vector2(2, 2)
+texture = ExtResource("6_di7eg")
+
+[node name="TochaApagada4" type="Sprite2D" parent="tochas2"]
+position = Vector2(504, 224)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
+
+[node name="TochaApagada5" type="Sprite2D" parent="tochas2"]
+position = Vector2(504, 280)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
+
+[node name="TochaApagada6" type="Sprite2D" parent="tochas2"]
+position = Vector2(456, 176)
+scale = Vector2(2, 2)
+texture = ExtResource("7_q5ohk")
 
 [connection signal="area_entered" from="botao 1" to="." method="_on_botao_1_area_entered"]
 [connection signal="area_entered" from="botao_2" to="." method="_on_botao_2_area_entered"]

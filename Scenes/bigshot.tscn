@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0ny2nbva7pw0"]
+[gd_scene load_steps=9 format=3 uid="uid://d0ny2nbva7pw0"]
 
 [ext_resource type="Script" uid="uid://b4gvjo6cww5io" path="res://Scripts/bigshot.gd" id="1_djxmi"]
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_sod3w"]
+[ext_resource type="Texture2D" uid="uid://dyq2cfqmnrrlj" path="res://Sprites/apamton.jpg" id="2_1m5i1"]
 [ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="2_djxmi"]
+[ext_resource type="FontFile" uid="uid://b1p5e4cluvlo7" path="res://Fonts/Minecraftia-Regular.ttf" id="5_eo2tr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1m5i1"]
 texture = ExtResource("1_sod3w")
@@ -56,6 +58,11 @@ size = Vector2(20, 64)
 [node name="BIGSHOT" type="Node2D"]
 script = ExtResource("1_djxmi")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(463.99997, 296)
+scale = Vector2(5.831111, 1.7666667)
+texture = ExtResource("2_1m5i1")
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_eo2tr")
@@ -72,10 +79,19 @@ scale = Vector2(2, 2)
 limit_left = 0
 limit_right = 768
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="vorta" type="Area2D" parent="."]
 position = Vector2(776, 320)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vorta"]
 shape = SubResource("RectangleShape2D_sod3w")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Label" type="Label" parent="."]
+offset_left = 184.0
+offset_top = 242.0
+offset_right = 566.0
+offset_bottom = 265.0
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("5_eo2tr")
+text = "Você [encontrou] o Spamton [secreto] desse jogo!"
+
+[connection signal="body_entered" from="vorta" to="." method="_on_vorta_body_entered"]

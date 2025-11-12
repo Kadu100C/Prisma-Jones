@@ -24,3 +24,7 @@ func _on_sair_button_pressed() -> void:
 
 func _on_iniciar_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/fase_1.tscn")
+
+
+func _on_creditos_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/creditos.tscn")

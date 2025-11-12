@@ -11,5 +11,5 @@ func _on_prox_area_body_entered(body: CharacterBody2D) -> void:
 
 
 
-func _on_now_is_your_chance_to_be_a_body_entered(body: Node2D) -> void:
+func _on_now_is_your_chance_to_be_a_body_entered(body: CharacterBody2D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/bigshot.tscn")

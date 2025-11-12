@@ -71,4 +71,5 @@ em busca da baleia de ouro"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/iniciar_button" to="." method="_on_iniciar_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos_button" to="." method="_on_creditos_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair_button" to="." method="_on_sair_button_pressed"]

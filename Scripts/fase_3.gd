@@ -16,7 +16,6 @@ var puzzle = 0
 
 func _on_botao_area_entered(area: Area2D) -> void:
 	if area.is_in_group("chicotada"):
-		botao.queue_free()
 		pillar_man.play("botao_apertado")
 		puzzle += 1
 		porta_34.play("porta_aberta")

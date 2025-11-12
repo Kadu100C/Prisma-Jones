@@ -39,13 +39,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6get"]
-size = Vector2(20, 2)
+size = Vector2(8, 6)
 
 [node name="prisma_runner" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_2p28a")
 autoplay = "default"
 frame_progress = 0.87852144
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="hurt_box" type="Area2D" parent="." groups=["hurtbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box" groups=["hurtbox"]]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_g6get")

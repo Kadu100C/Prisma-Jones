@@ -27,7 +27,6 @@ func _process(delta: float) -> void:
 		porta_34.play("porta_aberta")
 		bloqueio.queue_free()
 		win = true
-	print(puzzle)
 
 
 func _on_botao_1_area_entered(area: Area2D) -> void:

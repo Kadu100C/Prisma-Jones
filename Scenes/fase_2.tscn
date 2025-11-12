@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://jxoqnhndxoeg"]
+[gd_scene load_steps=16 format=3 uid="uid://jxoqnhndxoeg"]
 
 [ext_resource type="Script" uid="uid://dqeea712mo3cm" path="res://Scripts/fase_2.gd" id="1_cs05n"]
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_w016j"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dchq7m06fwvgx" path="res://Scenes/porta_34.tscn" id="8_au6ud"]
 [ext_resource type="Texture2D" uid="uid://cr8ipqmc8ja5b" path="res://Sprites/!.png" id="8_b0mac"]
 [ext_resource type="FontFile" uid="uid://b1p5e4cluvlo7" path="res://Fonts/Minecraftia-Regular.ttf" id="9_b0mac"]
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="10_wu88a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dh80i"]
 texture = ExtResource("1_w016j")
@@ -134,5 +135,17 @@ offset_right = 244.0
 offset_bottom = 290.0
 theme_override_fonts/font = ExtResource("9_b0mac")
 text = "Aperte X para interagir"
+
+[node name="tochas" type="Node2D" parent="."]
+
+[node name="TochaAcesa" type="Sprite2D" parent="tochas"]
+position = Vector2(51, 18)
+scale = Vector2(2, 2)
+texture = ExtResource("10_wu88a")
+
+[node name="TochaAcesa2" type="Sprite2D" parent="tochas"]
+position = Vector2(620, 209)
+scale = Vector2(2, 2)
+texture = ExtResource("10_wu88a")
 
 [connection signal="body_entered" from="prox_area" to="." method="_on_prox_area_body_entered"]

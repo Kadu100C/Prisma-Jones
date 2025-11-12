@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://p43h0fsku2i8"]
+[gd_scene load_steps=10 format=3 uid="uid://p43h0fsku2i8"]
 
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_8kf27"]
 [ext_resource type="Script" uid="uid://ojtqj18k5j3t" path="res://Scripts/fase_6.gd" id="1_eo8ig"]
 [ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="2_eo8ig"]
 [ext_resource type="PackedScene" uid="uid://bcc62uupoxusn" path="res://Scenes/pilarzao.tscn" id="3_hm7lg"]
+[ext_resource type="Texture2D" uid="uid://2pg45l10edii" path="res://Sprites/tocha acesa.png" id="5_hm7lg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch8gc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eo8ig"]
 texture = ExtResource("1_8kf27")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
@@ -49,7 +50,7 @@ texture = ExtResource("1_8kf27")
 
 [sub_resource type="TileSet" id="TileSet_5bily"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ch8gc")
+sources/0 = SubResource("TileSetAtlasSource_eo8ig")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kf27"]
 size = Vector2(112, 40)
@@ -70,7 +71,7 @@ layer_1/name = "Layer0"
 layer_1/tile_data = PackedInt32Array(1245196, 65536, 0, 1245192, 65536, 0, 1310728, 65536, 1, 1310729, 65536, 1, 1376265, 65536, 1, 1376267, 65536, 1, 1310732, 65536, 1, 1310731, 65536, 1, 1441801, 65536, 1, 1441803, 65536, 1, 1507339, 65536, 1, 1507337, 65536, 1, 1572873, 65536, 1, 1572875, 65536, 1, 1310730, 65536, 1, 1376266, 65536, 1, 1441802, 65536, 1, 1507338, 65536, 1, 1572874, 65536, 1, 1245195, 65536, 0, 1245193, 65536, 0, 1245194, 65536, 0, 1638409, 65536, 1, 1703945, 65536, 1, 1638410, 65536, 1, 1703946, 65536, 1, 1638411, 65536, 1, 1703947, 65536, 1, 1638412, 65536, 1, 1703948, 65536, 1, 1638408, 65536, 1, 1703944, 65536, 1, 1245184, 65536, 0, 1245185, 65536, 0, 1245186, 65536, 0, 1245187, 65536, 0, 1245188, 65536, 0, 1245189, 65536, 0, 1245190, 65536, 0, 1245191, 65536, 0, 1245197, 131072, 0, 1310733, 131072, 1, 1376269, 131072, 1, 1441805, 131072, 1, 1507341, 131072, 1, 1572877, 131072, 1, 1769485, 131072, 1, 1835021, 131072, 1, 1900557, 131072, 1, 1966093, 131072, 1, 2031629, 131072, 1, 2097165, 131072, 1, 2162701, 131072, 1, 2228237, 131072, 1, 2293773, 131072, 1, 2359309, 131072, 1, 2424845, 131072, 2, 2424839, 0, 2, 2359303, 0, 1, 2293767, 0, 1, 2228231, 0, 1, 2162695, 0, 1, 2097159, 0, 1, 2031623, 0, 1, 1966087, 0, 1, 1900551, 0, 1, 1835015, 0, 1, 1769479, 0, 1, 1703943, 0, 1, 1638407, 0, 1, 1376256, 65536, 2, 1376257, 65536, 2, 1376258, 65536, 2, 1376259, 65536, 2, 1376260, 65536, 2, 1376261, 65536, 2, 1376262, 65536, 2, 1376263, 196608, 2, 1441799, 0, 1, 1507335, 0, 1, 1572871, 0, 1, 1310720, 65536, 1, 1310721, 65536, 1, 1310722, 65536, 1, 1310723, 65536, 1, 1310724, 65536, 1, 1310725, 65536, 1, 1310726, 65536, 1, 1310727, 65536, 1, 1376268, 65536, 1, 1376264, 65536, 1, 1441800, 65536, 1, 1769482, 65536, 1, 1835018, 65536, 1, 1507336, 65536, 1, 1572872, 65536, 1, 1769480, 65536, 1, 1835016, 65536, 1, 1900552, 65536, 1, 1966088, 65536, 1, 2031624, 65536, 1, 2097160, 65536, 1, 2162696, 65536, 1, 2228232, 65536, 1, 2293768, 65536, 1, 2359304, 65536, 1, 1769481, 65536, 1, 1835017, 65536, 1, 1900553, 65536, 1, 1966089, 65536, 1, 2031625, 65536, 1, 2097161, 65536, 1, 2162697, 65536, 1, 2228233, 65536, 1, 2293769, 65536, 1, 2359305, 65536, 1, 1900554, 65536, 1, 1966090, 65536, 1, 2031626, 65536, 1, 2097162, 65536, 1, 2162698, 65536, 1, 2228234, 65536, 1, 2293770, 65536, 1, 2359306, 65536, 1, 1769483, 65536, 1, 1835019, 65536, 1, 1900555, 65536, 1, 1966091, 65536, 1, 2031627, 65536, 1, 2097163, 65536, 1, 2162699, 65536, 1, 2228235, 65536, 1, 2293771, 65536, 1, 2359307, 65536, 1, 1507340, 65536, 1, 1572876, 65536, 1, 1769484, 65536, 1, 1835020, 65536, 1, 1900556, 65536, 1, 1966092, 65536, 1, 2031628, 65536, 1, 2097164, 65536, 1, 2162700, 65536, 1, 2228236, 65536, 1, 2293772, 65536, 1, 2359308, 65536, 1, 1441804, 65536, 1, 2424844, 196608, 1, 2424840, 262144, 1, 2490376, 0, 1, 2490380, 131072, 1, 2555916, 131072, 2, 2555912, 0, 2, 2555913, 262144, 1, 2555915, 196608, 1, 2621449, 0, 1, 2686985, 0, 1, 2621451, 131072, 1, 2686987, 131072, 1, 2424842, 65536, 1, 2490378, 65536, 1, 2555914, 65536, 1, 2621450, 65536, 1, 2686986, 65536, 1, 2424841, 65536, 1, 2490377, 65536, 1, 2424843, 65536, 1, 2490379, 65536, 1, 2752521, 131072, 3, 2752522, 131072, 3, 2752523, 131072, 3, 1310719, 131072, 3, 1376255, 131072, 3, 1441791, 131072, 3, 1769486, 131072, 3, 1769487, 131072, 3, 1769488, 131072, 3, 1769489, 131072, 3, 1769490, 131072, 3, 1769491, 131072, 3, 1769492, 131072, 3, 1769493, 131072, 3, 1572878, 131072, 3, 1572879, 131072, 3, 1572880, 131072, 3, 1572881, 131072, 3, 1572882, 131072, 3, 1572883, 131072, 3, 1572884, 131072, 3, 1572885, 131072, 3, 1572886, 131072, 3, 1638422, 131072, 3, 1703958, 131072, 3, 1769494, 131072, 3)
 
 [node name="Prisma" parent="." instance=ExtResource("2_eo8ig")]
-position = Vector2(40, 643)
+position = Vector2(64, 648)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Prisma"]
@@ -115,6 +116,7 @@ position = Vector2(268, -96)
 scale = Vector2(4, 4)
 
 [node name="pilarzao9" parent="pilares" instance=ExtResource("3_hm7lg")]
+visible = false
 position = Vector2(64, 184)
 scale = Vector2(4, 4)
 
@@ -139,6 +141,33 @@ position = Vector2(624, 808)
 [node name="big_shot" type="CollisionShape2D" parent="now_is_your_chance_to_be_a"]
 position = Vector2(64, 24)
 shape = SubResource("RectangleShape2D_eo8ig")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TochaAcesa" type="Sprite2D" parent="Node2D"]
+position = Vector2(208, 800)
+scale = Vector2(2, 2)
+texture = ExtResource("5_hm7lg")
+
+[node name="TochaAcesa2" type="Sprite2D" parent="Node2D"]
+position = Vector2(464, 803)
+scale = Vector2(2, 2)
+texture = ExtResource("5_hm7lg")
+
+[node name="TochaAcesa3" type="Sprite2D" parent="Node2D"]
+position = Vector2(240, 1216)
+scale = Vector2(2, 2)
+texture = ExtResource("5_hm7lg")
+
+[node name="TochaAcesa4" type="Sprite2D" parent="Node2D"]
+position = Vector2(432, 1216)
+scale = Vector2(2, 2)
+texture = ExtResource("5_hm7lg")
+
+[node name="TochaAcesa5" type="Sprite2D" parent="Node2D"]
+position = Vector2(268, 472)
+scale = Vector2(2, 2)
+texture = ExtResource("5_hm7lg")
 
 [connection signal="body_entered" from="prox_area" to="." method="_on_prox_area_body_entered"]
 [connection signal="body_entered" from="now_is_your_chance_to_be_a" to="." method="_on_now_is_your_chance_to_be_a_body_entered"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl0yxxq77o56h"]
+
+[ext_resource type="Texture2D" uid="uid://bjlaib471uanq" path="res://Sprites/baleia-export.png" id="1_eyol1"]
+
+[node name="baleia" type="Sprite2D"]
+scale = Vector2(10, 10)
+texture = ExtResource("1_eyol1")
