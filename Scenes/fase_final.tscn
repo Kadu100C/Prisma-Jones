@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3pyjgpoup2ch"]
+[gd_scene load_steps=14 format=3 uid="uid://d3pyjgpoup2ch"]
 
 [ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_o318v"]
 [ext_resource type="Script" uid="uid://cb6h6mef5n2r8" path="res://Scripts/fase_final.gd" id="1_rd8dv"]
 [ext_resource type="PackedScene" uid="uid://bcc62uupoxusn" path="res://Scenes/pilarzao.tscn" id="2_fo0s7"]
+[ext_resource type="PackedScene" uid="uid://dr2nl52h3gq8" path="res://Scenes/pause.tscn" id="2_s2i1q"]
 [ext_resource type="PackedScene" uid="uid://cl0yxxq77o56h" path="res://Scenes/baleia.tscn" id="3_c70eb"]
 [ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="4_c70eb"]
 [ext_resource type="PackedScene" uid="uid://cawn4sls5tisk" path="res://Scenes/placa.tscn" id="5_wgdup"]
@@ -64,6 +65,9 @@ size = Vector2(48, 482)
 [node name="fase_final" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_rd8dv")
+
+[node name="pause" parent="." instance=ExtResource("2_s2i1q")]
+visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2, 2)
