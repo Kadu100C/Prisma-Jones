@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcc62uupoxusn"]
+
+[ext_resource type="Texture2D" uid="uid://hlwg8wrik1nb" path="res://Sprites/pilar-export.png" id="1_fyhdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bc05"]
+size = Vector2(30, 14.5)
+
+[node name="pilarzao" type="Sprite2D"]
+y_sort_enabled = true
+scale = Vector2(2, 2)
+texture = ExtResource("1_fyhdw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 16.75)
+shape = SubResource("RectangleShape2D_4bc05")

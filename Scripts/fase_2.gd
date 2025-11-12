@@ -1,5 +1,7 @@
 extends Node2D
-@onready var grade: AnimatedSprite2D = $grade
+
+@onready var porta_34: AnimatedSprite2D = $porta_34
+@onready var bloqueio: StaticBody2D = $bloqueio
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,7 +12,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Global.puzzlereload >= 2:
-		grade.play("parabens")
+		porta_34.play("porta_aberta")
+		bloqueio.queue_free()
 		Global.puzzlereload -= 1
 
 

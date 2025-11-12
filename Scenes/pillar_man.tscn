@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr2yjjgv6uyu"]
+
+[ext_resource type="Texture2D" uid="uid://duoeghgegau65" path="res://Sprites/pilar-frente-export.png" id="1_rga62"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr8gt"]
+atlas = ExtResource("1_rga62")
+region = Rect2(0, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwuma"]
+atlas = ExtResource("1_rga62")
+region = Rect2(32, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di1wy"]
+atlas = ExtResource("1_rga62")
+region = Rect2(0, 0, 32, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgbm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr8gt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwuma")
+}],
+"loop": false,
+"name": &"botao_apertado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di1wy")
+}],
+"loop": true,
+"name": &"botao_fds",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rga62"]
+size = Vector2(24, 13)
+
+[node name="pillar_man" type="AnimatedSprite2D"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_cgbm4")
+animation = &"botao_apertado"
+autoplay = "botao_fds"
+frame = 1
+frame_progress = 1.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_rga62")

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://v8fo4j1nteh0"]
+
+[ext_resource type="Texture2D" uid="uid://kq5e5rpuy33v" path="res://Sprites/Porta-sheet-export-export.png" id="1_ncju3"]
+[ext_resource type="Texture2D" uid="uid://c0lbc6ywb3ck6" path="res://Sprites/Porta-sheet-export.png" id="2_8wpqq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65dan"]
+atlas = ExtResource("1_ncju3")
+region = Rect2(0, 0, 21, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgg3s"]
+atlas = ExtResource("1_ncju3")
+region = Rect2(21, 0, 21, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyodj"]
+atlas = ExtResource("2_8wpqq")
+region = Rect2(0, 0, 21, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18fpp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65dan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgg3s")
+}],
+"loop": false,
+"name": &"porta_aberta_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyodj")
+}],
+"loop": false,
+"name": &"porta_fechada_a",
+"speed": 5.0
+}]
+
+[node name="porta_a" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_18fpp")
+animation = &"porta_fechada_a"
+autoplay = "porta_fechada_a"

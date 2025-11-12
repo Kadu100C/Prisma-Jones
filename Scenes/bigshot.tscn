@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0ny2nbva7pw0"]
+
+[ext_resource type="Script" uid="uid://b4gvjo6cww5io" path="res://Scripts/bigshot.gd" id="1_djxmi"]
+[ext_resource type="Texture2D" uid="uid://c4mi1353etrll" path="res://Sprites/Tilemap Prisma Jones.png" id="1_sod3w"]
+[ext_resource type="PackedScene" uid="uid://hv6uxo3aivh3" path="res://Scenes/prisma.tscn" id="2_djxmi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1m5i1"]
+texture = ExtResource("1_sod3w")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -6.760975, -6.9550705, -6.8580227, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.987419, -8, -7.1067886)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.0560255, 8, 6.852975, -7.0052624, -8, -6.903737, -8, -8, 8, -8, 8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.9392443, -5.786956, 5.837718, -8, 8, -8, 8, -5.5839047)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.888481, -8, -8, -5.1270404, -8, -5.1270404, -5.990007)
+5:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.106785, -8, -7.106785, 8, -8, 8, -8, -8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(7.0560255, 8, 6.9544992, -8, 8, -8, 8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.431617, 8, 5.533141, 5.3808537, 8, 5.2793293, 8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 5.177803, -5.431617, 5.177803, -5.3300915, 8)
+5:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.106785, -8, -7.0052605, 7.1067867, 8, 7.208315, 8, 8, -8, 8, -8, -8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7.208315, 8, 7.208315, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7.208315, 6.7514486, 7.0052624, 6.9544992, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 5.177803, -5.431617, 5.177803, -5.3300915, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.431617, 8, 5.533141, 5.3808537, 8, 5.2793293, 8, 8)
+5:2/0 = 0
+0:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.2793283, -8, -8, -5.9900074, -8, -5.7869563, -5.2793283)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.482379, -5.990007, 5.482379, -8, 8, -8, 8, -5.5839047)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_eo2tr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1m5i1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sod3w"]
+size = Vector2(20, 64)
+
+[node name="BIGSHOT" type="Node2D"]
+script = ExtResource("1_djxmi")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_eo2tr")
+format = 2
+layer_0/name = "Layer1"
+layer_1/name = "Layer0"
+layer_1/tile_data = PackedInt32Array(589824, 65536, 0, 589825, 65536, 0, 589826, 65536, 0, 589827, 65536, 0, 589828, 65536, 0, 589829, 65536, 0, 589830, 65536, 0, 589831, 65536, 0, 589832, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 589835, 65536, 0, 589836, 65536, 0, 589837, 65536, 0, 589838, 65536, 0, 589839, 65536, 0, 589840, 65536, 0, 589841, 65536, 0, 589842, 65536, 0, 589843, 65536, 0, 589844, 65536, 0, 589845, 65536, 0, 589846, 65536, 0, 589847, 65536, 0, 655360, 65536, 2, 655361, 65536, 2, 655362, 65536, 2, 655363, 65536, 2, 655364, 65536, 2, 655365, 65536, 2, 655366, 65536, 2, 655367, 65536, 2, 655368, 65536, 2, 655369, 65536, 2, 655370, 65536, 2, 655371, 65536, 2, 655372, 65536, 2, 655373, 65536, 2, 655374, 65536, 2, 655375, 65536, 2, 655376, 65536, 2, 655377, 65536, 2, 655378, 65536, 2, 655379, 65536, 2, 655380, 65536, 2, 655381, 65536, 2, 655382, 65536, 2, 655383, 65536, 2, 655359, 131072, 3, 720895, 131072, 3, 589848, 131072, 3, 655384, 131072, 3)
+
+[node name="Prisma" parent="." instance=ExtResource("2_djxmi")]
+position = Vector2(40, 312)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Prisma"]
+limit_left = 0
+limit_right = 768
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(776, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sod3w")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

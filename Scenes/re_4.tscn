@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://6g0ljoafy1sb"]
+
+[ext_resource type="Texture2D" uid="uid://c16qhrwlm43r1" path="res://Sprites/rocha-Sheet-export.png" id="1_t36aw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06dvs"]
+atlas = ExtResource("1_t36aw")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqlij"]
+atlas = ExtResource("1_t36aw")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgctf"]
+atlas = ExtResource("1_t36aw")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4xag"]
+atlas = ExtResource("1_t36aw")
+region = Rect2(120, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0auk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06dvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqlij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgctf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4xag")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="re4" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0auk6")
+frame_progress = 0.59143806

@@ -1,77 +1,31 @@
 extends CharacterBody2D
+class_name PlayerController
 
-var move_speed : float = 100.0
+@export var move_speed = 40.0
 
-var direction : Vector2 = Vector2.ZERO
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+var direction : Vector2
 
-@onready var sprite: Sprite2D = $Sprite2D
+enum facing {UP, DOWN, LEFT, RIGHT}
+var player_facing : facing
 
-var cardinal_direction : Vector2 = Vector2.DOWN
-var state : String = "idle"
-
-func _ready() -> void:
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
-func _process(_delta):
-	if Global.cutscene == false:
-		direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-		direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-		
-	if direction.x > 0:
-		animation_player.play("idle_down")
-	
-	velocity = direction * move_speed
-	
-	if SetState() == true or SetDirection() == true:
-		UpdateAnimation()
-	
-
-
-
-func _physics_process(_delta):
-	move_and_slide()
-
-
-func SetDirection() -> bool:
-	var new_dir : Vector2 = cardinal_direction
-	if direction == Vector2.ZERO:
-		return false
-	
-	if direction.y == 0:
-		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
-	elif direction.x == 0:
-		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN
-	
-	if new_dir == cardinal_direction:
-		return false
-	
-	cardinal_direction = new_dir
-	sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
-	return true
-
-
-func SetState() -> bool:
-	var new_state : String = "idle" if direction == Vector2.ZERO else "walk"
-	if new_state == state:
-		return false
-	
-	state = new_state
-	return true
-
-
-func UpdateAnimation() -> void:
-	animation_player.play(state + "_" + AnimDirection())
-	pass
-
-
-func AnimDirection() -> String:
-	if cardinal_direction == Vector2.DOWN:
-		return "down"
-	elif  cardinal_direction == Vector2.UP:
-		return "up"
+func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("move_up"):
+		direction.y = -1
+		player_facing = facing.UP
+	elif Input.is_action_pressed("move_down"):
+		direction.y = 1
+		player_facing = facing.DOWN
 	else:
-		return "side"
+		direction.y = 0
+	
+	if Input.is_action_pressed("move_right"):
+		direction.x = 1
+		player_facing = facing.RIGHT
+	elif Input.is_action_pressed("move_left"):
+		direction.x = -1
+		player_facing = facing.LEFT
+	else:
+		direction.x = 0
+	
+	velocity = direction * move_speed * delta * 200
+	move_and_slide()

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dchq7m06fwvgx"]
+
+[ext_resource type="Texture2D" uid="uid://dqf4wx4dgba2v" path="res://Sprites/portas3x4-export.png" id="1_sluxe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiww1"]
+atlas = ExtResource("1_sluxe")
+region = Rect2(0, 0, 31, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j062p"]
+atlas = ExtResource("1_sluxe")
+region = Rect2(31, 0, 31, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2ymf"]
+atlas = ExtResource("1_sluxe")
+region = Rect2(0, 0, 31, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ck8ac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiww1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j062p")
+}],
+"loop": false,
+"name": &"porta_aberta",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2ymf")
+}],
+"loop": true,
+"name": &"porta_fechada",
+"speed": 5.0
+}]
+
+[node name="porta_34" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ck8ac")
+animation = &"porta_fechada"
+autoplay = "porta_fechada"

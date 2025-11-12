@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnsp6t4ljjg54"]
+
+[ext_resource type="Texture2D" uid="uid://vn3u67sg0djg" path="res://Sprites/botão1 (1)-Sheet-export.png" id="1_sggcf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh1ep"]
+atlas = ExtResource("1_sggcf")
+region = Rect2(0, 0, 19, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf8jt"]
+atlas = ExtResource("1_sggcf")
+region = Rect2(19, 0, 19, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8237t"]
+atlas = ExtResource("1_sggcf")
+region = Rect2(0, 0, 19, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0agp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh1ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf8jt")
+}],
+"loop": false,
+"name": &"botao_pobre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8237t")
+}],
+"loop": true,
+"name": &"botao_triste",
+"speed": 5.0
+}]
+
+[node name="botao_chao" type="AnimatedSprite2D"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_t0agp")
+animation = &"botao_pobre"
+autoplay = "botao_triste"
+frame = 1
+frame_progress = 1.0
